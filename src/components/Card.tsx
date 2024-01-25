@@ -20,10 +20,7 @@ function Card({
   active,
 }: CardProps) {
   return (
-    <div
-      className={`card ${active ? 'active' : ''}`}
-      onClick={() => onCardSelect(index)}
-    >
+    <div className={`card ${active ? 'active' : ''}`}>
       <div className="card__image-container">
         <img
           src={cardImage}
@@ -42,7 +39,11 @@ function Card({
             ))}
           </div>
         </div>
-        <Button text={cardButtonText} additionalClassNames="card__button" />
+        <Button
+          text={cardButtonText}
+          additionalClassNames="card__button"
+          onButtonClick={() => onCardSelect(index)}
+        />
       </div>
     </div>
   );
