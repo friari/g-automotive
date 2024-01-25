@@ -1,0 +1,107 @@
+@import 'mixins';
+@import 'variables';
+
+.hero {
+  position: relative;
+
+  &__image {
+    &-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 125%;
+
+      @media screen and (min-width: $breakpoint-tablet-vertical) {
+        padding-bottom: 70%;
+      }
+
+      @media screen and (min-width: $breakpoint-tablet-horizontal) {
+        padding-bottom: 50%;
+      }
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        padding-bottom: 30.4%;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.4);
+      }
+    }
+
+    @include centerAlign;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__content {
+    @include centerAlign;
+    color: $font-color-white;
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+    max-width: 57rem;
+    margin: 0 auto;
+
+    @media screen and (min-width: $breakpoint-tablet-vertical) {
+      width: 90%;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet-horizontal) {
+      width: 80%;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      width: 60%;
+    }
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+
+    @media screen and (min-width: $breakpoint-tablet-vertical) {
+      margin-bottom: 1.25rem;
+      font-size: 2rem;
+    }
+
+    @media screen and (min-width: $breakpoint-tablet-horizontal) {
+      font-size: 2.5rem;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      font-size: 3.125rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__paragraph {
+    margin-bottom: 1.75rem;
+    font-size: .875rem;
+    line-height: 1.25;
+
+    @media screen and (min-width: $breakpoint-tablet-vertical) {
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    @media screen and (min-width: $breakpoint-desktop) {
+      font-size: 1.2rem;
+      margin-bottom: 3.125rem;
+    }
+  }
+
+  &__button {
+    @media screen and (min-width: $breakpoint-desktop) {
+      border-radius: 2.5rem;
+      padding: .75rem 2.5rem;
+      font-size: 1.2rem;
+    }
+  }
+}
