@@ -1,7 +1,7 @@
 import '../styles/Button.scss';
 
 interface ButtonProps {
-  additionalClassNames: string;
+  additionalClassNames?: string;
   text: string;
   hrefUrl?: string;
 }

@@ -1,5 +1,7 @@
 import Hero from './components/Hero';
+import CardsContainer from './components/CardsContainer';
 import backgroundImg from './assets/ford-ranger_rd5m4t.jpg';
+import { cardsData } from './data/cardsData';
 
 function App() {
   const heroText =
@@ -14,6 +16,7 @@ function App() {
         backgroundImgSrc={backgroundImg}
         backgroundImgAlt="A blue Ford Ranger drives offroad on grey gravel. A mountain range can be seen in the distance."
       />
+      <CardsContainer cardsData={cardsData} />
     </>
   );
 }

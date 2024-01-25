@@ -3,6 +3,7 @@
 
 .button {
   display: inline-flex;
+  justify-content: center;
   background-color: $brand-color-blue;
   color: $font-color-white;
   border-radius: 1rem;
